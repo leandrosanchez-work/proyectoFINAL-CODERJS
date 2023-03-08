@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Disponibilidad de Credito</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+          </ul>
+        </div>
+      </nav>
+    <div class="row">
+        <div class="col s11">
+    <form id="altaFormulario">
+        <div>
+            
+            <label for="cargaDNI">DNI</label> 
+            <input id="cargaDNI" name="cargaDNI">
+        </div>
+        <div>
+            
+            <label for="cargaNombre">Nombre</label> 
+            <input id="cargaNombre" name="cargaNombre">
+        </div>
+        <div>
+
+            <label for="cargaHaberes">Haberes sujetos</label> 
+            <input id="cargaHaberes" name="cargaHaberes" type="number" >
+        </div>
+        <div>
+            
+            <label for="cargaDescuentos">Descuentos</label>
+            <input id="cargaDescuentos" name="cargaDescuentos" type="number">
+        </div>
+        <div>
+            Tipo
+            <p>
+                <label>
+                  <input id="cargaporBono" class="with-gap" name="cargatipoSelector" type="radio"  value="Descuento por Bono"/>
+                  <span>Descuento por bono</span>
+                </label>
+                <label>
+                    <input id="cargaVoluntario" class="with-gap" name="cargatipoSelector" type="radio" value="Pago Voluntario" />
+                    <span>Pago voluntario</span>
+                  </label>
+            </p>
+                   
+            
+            
+        </div>
+        <br>
+        <div>
+            <button>Guardar</button>
+        </div>
+        <br>
+        <div>
+        </div>
+        <div class="col s9">    
+            <table id="tablaDatos">
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Haberes sujetos</th>
+                    <th>Descuentos</th>
+                    <th>Tipo</th>
+                    <th>Eliminar</th>
+                </tr>
+            </table>
+            </div>
+            </div>
+         </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
