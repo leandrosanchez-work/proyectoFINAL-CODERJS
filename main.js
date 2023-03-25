@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 async function loadUsers(){
    const response = await fetch('https://fakerapi.it/api/v1/users?_quantity=1000')
-   const data = await response.json()
-   console.log(data)  
+   return await response.json()
+  
 }
 
 input.addEventListener('keyup', e =>{
