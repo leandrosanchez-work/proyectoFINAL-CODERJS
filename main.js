@@ -15,15 +15,28 @@ form.addEventListener("submit", function(event){
 } );
 
 
+const input = document.querySelector('#searchInput')
+
 document.addEventListener("DOMContentLoaded", function (event) {
     let datosObjetoArray = JSON.parse(localStorage.getItem("datoGuardado"))
     datosObjetoArray.forEach(
      function(elementosArray){
         insertarEnTabla(elementosArray)
+        loadUsers()
         console.log("dato insertado")
      });
 } )
 
+async function loadUsers(){
+   const response = await fetch('https://fakerapi.it/api/v1/users?_quantity=1000')
+   const data = await response.json()
+   console.log(data)  
+}
+
+input.addEventListener('keyup', e =>{
+    console.log(input.value)
+
+})    
 
 
 
@@ -100,5 +113,4 @@ function calculador(datosFormData){
 
 
 }
-
 
